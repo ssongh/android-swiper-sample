@@ -49,6 +49,7 @@ class FirstFragment : Fragment() {
                 clampedX: Boolean,
                 clampedY: Boolean
             ) {
+                // OverScroll 발생 시 ViewPager Swipe 가능하게
                 webViewCallback?.onSwipeWebView(true)
             }
         })
@@ -57,10 +58,12 @@ class FirstFragment : Fragment() {
             override fun onTouchEvent(event: MotionEvent?) {
                 when (event?.action) {
                     MotionEvent.ACTION_DOWN -> {
+                        // WebView에 ACTION_DOWN 발생 시 ViewPager Swipe 불가능하게
                         webViewCallback?.onSwipeWebView(false)
                     }
 
                     MotionEvent.ACTION_UP -> {
+                        // WebView에 ACTION_DOWN 발생 시 ViewPager Swipe 가능하게
                         webViewCallback?.onSwipeWebView(true)
                     }
                 }
