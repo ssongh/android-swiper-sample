@@ -1,6 +1,6 @@
 # android-swiper-sample
 
-### 이슈
+### ViewPager 안의 WebView Swiper 이슈
 
 ![swipe](https://user-images.githubusercontent.com/50819260/103495712-12505600-4e7f-11eb-9edb-ab20135079e2.png)
 
